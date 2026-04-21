@@ -20,6 +20,39 @@ links.querySelectorAll('a').forEach(a => {
   });
 });
 
+// ── Card text-size control (desktop only) ──────────────────────────
+(function () {
+  if (window.matchMedia('(max-width: 768px)').matches) return;
+
+  const STEPS = [0.75, 0.85, 1, 1.1, 1.2, 1.35, 1.5];
+  const KEY   = 'gastrolab_cardScale';
+  let idx = parseInt(localStorage.getItem(KEY) ?? '2', 10);
+
+  function apply () {
+    document.documentElement.style.setProperty('--card-scale', STEPS[idx]);
+    minus.disabled = idx === 0;
+    plus.disabled  = idx === STEPS.length - 1;
+    minus.style.opacity = minus.disabled ? '0.3' : '1';
+    plus.style.opacity  = plus.disabled  ? '0.3' : '1';
+  }
+
+  const bar = document.createElement('div');
+  bar.id = 'cardSizeControl';
+  bar.innerHTML = `
+    <span class="csc-label">Card Text</span>
+    <button class="csc-btn" id="cscMinus" aria-label="Decrease text size">−</button>
+    <button class="csc-btn" id="cscPlus"  aria-label="Increase text size">+</button>`;
+  document.body.appendChild(bar);
+
+  const minus = document.getElementById('cscMinus');
+  const plus  = document.getElementById('cscPlus');
+
+  minus.addEventListener('click', () => { if (idx > 0)              { idx--; localStorage.setItem(KEY, idx); apply(); } });
+  plus.addEventListener ('click', () => { if (idx < STEPS.length-1) { idx++; localStorage.setItem(KEY, idx); apply(); } });
+
+  apply();
+})();
+
 // Portfolio strip — drag (mouse) + swipe (touch)
 const strip = document.getElementById('portfolioStrip');
 if (strip) {
