@@ -1178,3 +1178,38 @@ body.page-home .contact-email { color: #aaa49c; }
   .btn-dark, .btn-dark-outline { width: 100%; text-align: center; }
   .btn-text-link { width: auto; }
 }
+
+/* ── DESKTOP TEXT SIZE INCREASES ── */
+@media (min-width: 769px) {
+  /* Nav */
+  .nav-links a { font-size: 1rem; }
+
+  /* Body copy */
+  p { font-size: 1.08rem; }
+
+  /* Service cards */
+  .svc-card h4   { font-size: 1.25rem; }
+  .svc-card p    { font-size: 1rem; }
+
+  /* Services intro (services page) */
+  .svc-intro-lead { font-size: clamp(1.4rem, 2.2vw, 1.9rem); }
+  .svc-intro-sub  { font-size: 1.1rem; }
+
+  /* Service detail text */
+  .svc-text > p   { font-size: 1.1rem; }
+  .svc-includes li { font-size: 1rem; }
+  .svc-best-for   { font-size: 1rem; }
+  .svc-includes-label { font-size: 0.82rem; }
+
+  /* About bio */
+  .bio-text p     { font-size: 1.12rem; }
+
+  /* How-it-works steps */
+  .how-step p     { font-size: 1rem; }
+
+  /* Experience section */
+  .exp-item p     { font-size: 1rem; }
+
+  /* Gastro lab section */
+  .gastrolab-text p { font-size: 1.1rem; }
+}
