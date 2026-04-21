@@ -17,8 +17,9 @@
   --svc-body-size:      14px;
   --svc-link-size:      13px;
 
-  /* Set by JS control bar — do not edit */
-  --card-scale:         1;
+  /* Set by JS control bars — do not edit */
+  --svc-scale:          1;
+  --how-scale:          1;
 }
 /* ============================================ */
 
@@ -1208,36 +1209,45 @@ body.page-home .contact-email { color: #aaa49c; }
 @media (min-width: 769px) {
   #cardSizeControl {
     display: flex;
-    align-items: center;
-    gap: 10px;
+    flex-direction: column;
+    gap: 8px;
     position: fixed;
     bottom: 32px;
     right: 32px;
     z-index: 500;
     background: rgba(245,240,232,0.97);
-    border: 1px solid rgba(200,169,110,0.5);
-    border-radius: 6px;
-    padding: 10px 16px;
+    border: 1px solid rgba(200,169,110,0.45);
+    border-radius: 8px;
+    padding: 14px 16px;
     box-shadow: 0 4px 20px rgba(26,24,20,0.10);
     backdrop-filter: blur(6px);
   }
+  .csc-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .csc-row + .csc-row {
+    padding-top: 8px;
+    border-top: 1px solid rgba(200,169,110,0.25);
+  }
   .csc-label {
     font-family: 'DM Sans', sans-serif;
-    font-size: 11px;
+    font-size: 10px;
     font-weight: 500;
-    letter-spacing: 0.14em;
+    letter-spacing: 0.13em;
     text-transform: uppercase;
     color: #8a8278;
-    margin-right: 4px;
+    width: 100px;
   }
   .csc-btn {
-    width: 30px;
-    height: 30px;
+    width: 28px;
+    height: 28px;
     border-radius: 4px;
     border: 1px solid rgba(200,169,110,0.5);
     background: transparent;
     color: #C8A96E;
-    font-size: 18px;
+    font-size: 17px;
     line-height: 1;
     cursor: pointer;
     font-family: 'DM Sans', sans-serif;
@@ -1246,7 +1256,7 @@ body.page-home .contact-email { color: #aaa49c; }
     justify-content: center;
     transition: background 0.18s, color 0.18s;
   }
-  .csc-btn:hover:not(:disabled) {
+  .csc-btn:hover {
     background: #C8A96E;
     color: #fff;
   }
@@ -1268,17 +1278,17 @@ body.page-home .contact-email { color: #aaa49c; }
   p                         { font-size: 20px !important; }
   .hero-subhead             { font-size: 20px !important; }
 
-  .svc-card h4              { font-size: calc(var(--svc-title-size) * var(--card-scale)) !important; }
-  .svc-card p               { font-size: calc(var(--svc-body-size)  * var(--card-scale)) !important; }
-  .svc-card-link            { font-size: calc(var(--svc-link-size)  * var(--card-scale)) !important; }
+  .svc-card h4              { font-size: calc(var(--svc-title-size) * var(--svc-scale)) !important; }
+  .svc-card p               { font-size: calc(var(--svc-body-size)  * var(--svc-scale)) !important; }
+  .svc-card-link            { font-size: calc(var(--svc-link-size)  * var(--svc-scale)) !important; }
 
   .svc-text > p             { font-size: 20px !important; }
   .svc-includes li          { font-size: 18px !important; }
   .svc-best-for             { font-size: 18px !important; }
 
-  .how-step h4              { font-size: calc(26px * var(--card-scale)) !important; }
-  .how-step p               { font-size: calc(18px * var(--card-scale)) !important; }
-  .how-num                  { font-size: calc(4.5rem * var(--card-scale)) !important; }
+  .how-step h4              { font-size: calc(26px   * var(--how-scale)) !important; }
+  .how-step p               { font-size: calc(18px   * var(--how-scale)) !important; }
+  .how-num                  { font-size: calc(4.5rem * var(--how-scale)) !important; }
 
   .about-text p             { font-size: 20px !important; }
   .cta-body                 { font-size: 20px !important; }
