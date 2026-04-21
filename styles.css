@@ -1111,6 +1111,11 @@ body.page-home .contact-email { color: #aaa49c; }
   .nav-links.open { display: flex; }
   .nav-links a { font-size: 1.35rem; }
 
+  /* Override homepage dark link colours inside the dark mobile overlay */
+  body.page-home .nav-links.open a         { color: rgba(245,240,232,0.8); }
+  body.page-home .nav-links.open a:hover,
+  body.page-home .nav-links.open a.active  { color: #ffffff; }
+
   body.page-home .services-grid { grid-template-columns: repeat(2, 1fr); }
 
   /* Hero split stacks on mobile */
