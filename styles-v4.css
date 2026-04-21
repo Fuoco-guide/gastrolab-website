@@ -438,7 +438,7 @@ footer {
 
 /* — SERVICES PREVIEW (index) — */
 .services-preview {
-  padding: 100px 28px;
+  padding: 100px 60px;
   background: var(--bg-secondary);
 }
 .services-grid {
@@ -1012,13 +1012,14 @@ body.page-home .section-header .label { color: var(--gold); }
 
 /* Services — 5 columns, white cards */
 body.page-home .services-grid {
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   background: rgba(26,24,20,0.05);
   border-color: rgba(26,24,20,0.05);
 }
 body.page-home .svc-card {
   background: #ffffff;
   border-top: 2px solid var(--gold);
+  padding: 48px 40px;
 }
 body.page-home .svc-card:hover {
   background: #faf7f2;
