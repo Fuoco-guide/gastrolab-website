@@ -1184,3 +1184,14 @@ body.page-home .contact-email { color: #aaa49c; }
   html { font-size: 15px; }
   .nav-links a { font-size: 1.35rem; }
 }
+
+/* ── DESKTOP FONT SIZES (769px and up) ── */
+@media (min-width: 769px) {
+  h1                   { font-size: 72px !important; }
+  h2                   { font-size: 52px !important; }
+  h3                   { font-size: 26px !important; }
+  p                    { font-size: 18px !important; }
+  .svc-card p          { font-size: 16px !important; }
+  .svc-text > p        { font-size: 18px !important; }
+  .how-step p          { font-size: 18px !important; }
+}
