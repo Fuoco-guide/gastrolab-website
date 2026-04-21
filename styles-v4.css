@@ -1187,12 +1187,36 @@ body.page-home .contact-email { color: #aaa49c; }
 
 /* ── DESKTOP FONT SIZES (769px and up) ── */
 @media (min-width: 769px) {
-  h1                   { font-size: 72px !important; }
-  h2                   { font-size: 52px !important; }
-  h3                   { font-size: 26px !important; }
-  p                    { font-size: 18px !important; }
-  .svc-card p          { font-size: 16px !important; }
-  .svc-text > p        { font-size: 18px !important; }
-  .how-step p          { font-size: 18px !important; }
-  .nav-links a         { font-size: 22px !important; }
+  /* Headings */
+  h1                        { font-size: 72px !important; }
+  h2                        { font-size: 52px !important; }
+  h3                        { font-size: 28px !important; }
+  h4                        { font-size: 22px !important; }
+
+  /* Body text */
+  p                         { font-size: 18px !important; }
+  .hero-subhead             { font-size: 18px !important; }
+
+  /* Service cards (5-column — keep readable but not too wide) */
+  .svc-card h4              { font-size: 20px !important; }
+  .svc-card p               { font-size: 15px !important; }
+  .svc-card-link            { font-size: 13px !important; }
+
+  /* Service page detail text */
+  .svc-text > p             { font-size: 18px !important; }
+  .svc-includes li          { font-size: 16px !important; }
+  .svc-best-for             { font-size: 16px !important; }
+
+  /* How it works steps */
+  .how-step h4              { font-size: 20px !important; }
+  .how-step p               { font-size: 16px !important; }
+
+  /* About page */
+  .about-text p             { font-size: 18px !important; }
+
+  /* CTA */
+  .cta-body                 { font-size: 18px !important; }
+
+  /* Nav */
+  .nav-links a              { font-size: 18px !important; }
 }
