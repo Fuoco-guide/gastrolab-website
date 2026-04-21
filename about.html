@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — The Gastro Lab</title>
+  <meta name="description" content="Victor and Debora — the creative duo behind The Gastro Lab. Professional food photography and content strategy for food bloggers.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* ── ABOUT PAGE OVERRIDES ── */
+    body.page-about { background: #ffffff; }
+
+    body.page-about nav {
+      background: #ffffff;
+      border-bottom-color: rgba(26,24,20,0.07);
+    }
+    body.page-about nav.scrolled { box-shadow: 0 2px 16px rgba(26,24,20,0.07); }
+    body.page-about .nav-logo-img        { filter: brightness(0); }
+    body.page-about .nav-links a         { color: rgba(26,24,20,0.6); }
+    body.page-about .nav-links a:hover,
+    body.page-about .nav-links a.active  { color: #1a1814; }
+    body.page-about .nav-links a::after  { background: #1a1814; }
+    body.page-about .nav-toggle span     { background: #1a1814; }
+
+    @media (max-width: 768px) {
+      body.page-about .nav-links.open { background: rgba(10,10,10,0.97); }
+      body.page-about .nav-links.open a { color: rgba(245,240,232,0.8); }
+      body.page-about .nav-links.open a:hover,
+      body.page-about .nav-links.open a.active { color: #fff; }
+    }
+
+    /* ── PAGE TITLE ── */
+    .about-hero-section {
+      padding: 120px 28px 80px;
+      background: #ffffff;
+      text-align: center;
+    }
+    .about-hero-section .label {
+      font-size: 0.85rem;
+      letter-spacing: 0.22em;
+      margin-bottom: 20px;
+      display: block;
+    }
+    .about-hero-section h1 {
+      font-size: clamp(3.2rem, 7vw, 6rem);
+      color: #1a1814;
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+    }
+    .about-hero-divider {
+      width: 48px;
+      height: 1px;
+      background: var(--gold);
+      margin: 36px auto 0;
+    }
+
+    /* ── BIO SECTIONS ── */
+    .bio-section {
+      padding: 90px 28px;
+      background: #ffffff;
+    }
+    .bio-section--alt { background: #faf8f5; }
+
+    .bio-inner {
+      max-width: 1060px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: start;
+    }
+    .bio-inner--rev .bio-img  { order: 2; }
+    .bio-inner--rev .bio-text { order: 1; }
+
+    /* Image: natural aspect ratio, no forced height */
+    .bio-img { position: relative; }
+    .bio-img img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: contain;
+    }
+    .bio-img-accent {
+      position: absolute;
+      bottom: -14px;
+      right: -14px;
+      width: 55%;
+      height: 55%;
+      border: 1px solid rgba(200,169,110,0.22);
+      pointer-events: none;
+      z-index: -1;
+    }
+    .bio-inner--rev .bio-img .bio-img-accent { right: auto; left: -14px; }
+
+    /* Text */
+    .bio-text { padding-top: 16px; }
+    .bio-text .label { display: block; margin-bottom: 10px; }
+    .bio-text h2 {
+      font-size: clamp(2rem, 3.5vw, 3rem);
+      color: #1a1814;
+      margin-bottom: 10px;
+      line-height: 1.1;
+    }
+    .bio-text .bio-role {
+      font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 28px;
+      display: block;
+    }
+    .bio-text p {
+      color: #5a554f;
+      font-size: 1.02rem;
+      line-height: 1.85;
+    }
+    .bio-text p + p { margin-top: 20px; }
+
+    /* ── GASTRO LAB SECTION ── */
+    .gastrolab-section {
+      padding: 100px 28px;
+      background: #1a1814;
+    }
+    .gastrolab-inner {
+      max-width: 1060px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+    .gastrolab-img img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: contain;
+    }
+    .gastrolab-text .label {
+      color: var(--gold);
+      display: block;
+      margin-bottom: 18px;
+    }
+    .gastrolab-text h2 {
+      font-size: clamp(2rem, 3.5vw, 3rem);
+      color: #f5f0e8;
+      line-height: 1.12;
+      margin-bottom: 30px;
+    }
+    .gastrolab-text p {
+      color: rgba(245,240,232,0.68);
+      font-size: 1rem;
+      line-height: 1.88;
+    }
+    .gastrolab-text p + p { margin-top: 20px; }
+
+    /* Footer on white page */
+    body.page-about footer {
+      background: #ffffff;
+      border-top-color: rgba(26,24,20,0.08);
+    }
+    body.page-about .footer-copy { color: #a09890; }
+    body.page-about .footer-ig   { color: #8a7e72; }
+    body.page-about .footer-ig:hover { color: var(--gold); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      .bio-inner { gap: 52px; }
+      .gastrolab-inner { gap: 52px; }
+    }
+    @media (max-width: 768px) {
+      .bio-inner,
+      .bio-inner--rev,
+      .gastrolab-inner {
+        grid-template-columns: 1fr;
+        gap: 36px;
+      }
+      .bio-inner--rev .bio-img  { order: unset; }
+      .bio-inner--rev .bio-text { order: unset; }
+      .bio-img-accent { display: none; }
+      .bio-text { padding-top: 0; }
+      .bio-section,
+      .gastrolab-section { padding: 64px 28px; }
+      .about-hero-section { padding: 90px 28px 60px; }
+    }
+  </style>
+</head>
+<body class="page-about">
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <a href="index.html" class="nav-logo"><img src="images/logo.webp" alt="The Gastro Lab" class="nav-logo-img"></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="about.html" class="active">About</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- PAGE TITLE -->
+  <section class="about-hero-section">
+    <span class="label">Our Story</span>
+    <h1>Who We Are</h1>
+    <div class="about-hero-divider"></div>
+  </section>
+
+  <!-- VICTOR -->
+  <section class="bio-section">
+    <div class="bio-inner">
+      <div class="bio-img">
+        <img
+          src="images/victor1.webp"
+          alt="Victor — food photographer and editor at The Gastro Lab"
+          loading="lazy"
+        >
+        <div class="bio-img-accent"></div>
+      </div>
+      <div class="bio-text">
+        <span class="label">Meet the team</span>
+        <h2>Victor</h2>
+        <span class="bio-role">Food Photographer &amp; Editor</span>
+        <p>Victor is the photographer behind every shoot at The Gastro Lab. With years of experience working across restaurants, food brands, and digital content, he brings technical precision and a natural instinct for how food behaves in front of a camera — how it moves, how light hits it, and what it takes to make a dish look exactly as good as it tastes. His work has helped brands and bloggers across the food industry build a visual identity that doesn't just look good, but performs.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- DEBORA -->
+  <section class="bio-section bio-section--alt">
+    <div class="bio-inner bio-inner--rev">
+      <div class="bio-img">
+        <img
+          src="images/debora1.webp"
+          alt="Debora — food styling and content strategy at The Gastro Lab"
+          loading="lazy"
+        >
+        <div class="bio-img-accent"></div>
+      </div>
+      <div class="bio-text">
+        <span class="label">Meet the team</span>
+        <h2>Debora</h2>
+        <span class="bio-role">Food Styling &amp; Content Strategy</span>
+        <p>Debora brings over a decade of experience across hospitality management, food styling, and content strategy. She has worked alongside some of the finest fine dining operations in the world, developing a sharp eye for how food communicates — not just visually, but emotionally. Her background in recipe development and food styling means she understands what makes a dish translate on camera and feel achievable to a home cook at the same time.</p>
+        <p>Most recently she spent two years at Gronda, one of the leading platforms for culinary professionals, where she supported over 100 chefs and content creators in growing their personal brands and social media presence. That combination of hospitality depth, styling expertise, and digital strategy is what she brings to every project at The Gastro Lab.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT IS THE GASTRO LAB -->
+  <section class="gastrolab-section">
+    <div class="gastrolab-inner">
+      <div class="gastrolab-img">
+        <img
+          src="images/duo.webp"
+          alt="Victor and Debora — The Gastro Lab"
+          loading="lazy"
+        >
+      </div>
+      <div class="gastrolab-text">
+        <span class="label">What We Do</span>
+        <h2>The Studio Behind the Shot</h2>
+        <p>Together, Victor and Debora created The Gastro Lab — a professional food photography studio built specifically for food bloggers and recipe websites. Every recipe that comes through gets cooked, tasted, and shot by people who genuinely care about food and understand what makes content perform.</p>
+        <p>From a single reshoot to a full content strategy, The Gastro Lab offers everything a food blog needs to grow — original recipe development, exclusive photography, video content, and custom packages built around your niche and budget. No generic stock aesthetics, no guesswork. Just intentional, high-quality visuals made to rank on Google, convert on Pinterest, and keep your audience coming back for more.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <p class="footer-copy">© 2026 The Gastro Lab. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

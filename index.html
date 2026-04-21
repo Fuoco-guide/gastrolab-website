@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Gastro Lab — Food Photography & Recipe Development for Food Bloggers</title>
+  <meta name="description" content="Professional food photography and recipe development studio for food bloggers. We handle the kitchen, the camera, and the content strategy.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="page-home">
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <a href="index.html" class="nav-logo"><img src="images/logo.webp" alt="The Gastro Lab" class="nav-logo-img"></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero hero-split">
+    <div class="hero-left">
+      <div class="hero-left-inner">
+        <p class="label hero-label">FOR FOOD BLOGGERS</p>
+        <h1 class="hero-headline">Professional food photography and recipe content</h1>
+        <p class="hero-subhead">From vegan bowls to Mediterranean spreads to Asian street food — we've shot it, cooked it, and styled it. Ten years in hospitality and food tech taught us what works behind the camera and behind a blog. We understand your world because we've lived it.</p>
+        <div class="hero-btns">
+          <a href="services.html" class="btn btn-dark">See Our Services</a>
+          <a href="#contact" class="btn btn-dark-outline">Get In Touch</a>
+          <a href="#portfolioStrip" class="btn btn-text-link">See Gallery →</a>
+        </div>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="hero-img-grid">
+        <div class="hero-img-cell" style="--i:0"><img src="images/hero1.webp" alt="Food photography — vegan bowl" loading="eager"></div>
+        <div class="hero-img-cell" style="--i:1"><img src="images/hero2.webp" alt="Food photography — Mediterranean spread" loading="eager"></div>
+        <div class="hero-img-cell" style="--i:2"><img src="images/hero3.webp" alt="Food photography — Asian street food" loading="eager"></div>
+        <div class="hero-img-cell" style="--i:3"><img src="images/hero4.webp" alt="Food photography — recipe content" loading="eager"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES PREVIEW -->
+  <section class="services-preview">
+    <div class="section-header">
+      <h2>Our Services</h2>
+    </div>
+    <div class="services-grid">
+
+      <!-- Exclusive Recipe Shoot -->
+      <div class="svc-card">
+        <svg class="svc-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect x="4" y="11" width="32" height="22" rx="2.5" stroke="currentColor" stroke-width="1.3"/>
+          <circle cx="20" cy="22" r="7" stroke="currentColor" stroke-width="1.3"/>
+          <circle cx="20" cy="22" r="2.5" stroke="currentColor" stroke-width="1.1" opacity=".45"/>
+          <path d="M13.5 11 L16 6.5 H24 L26.5 11" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="31.5" cy="16" r="1.5" fill="currentColor" opacity=".5"/>
+        </svg>
+        <h4>Exclusive Recipe Shoot</h4>
+        <p>You tell us the recipe and we bring it to life around your brand and vision. Before anything is cooked or shot, we align on every detail — lighting, styling, backgrounds, props — so the final gallery feels completely yours.</p>
+        <a href="services.html#exclusive-shoot" class="svc-card-link">Learn More →</a>
+      </div>
+
+      <!-- Recipe Development -->
+      <div class="svc-card">
+        <svg class="svc-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <line x1="20" y1="22" x2="20" y2="35" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/>
+          <line x1="14" y1="6"  x2="14" y2="16" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/>
+          <line x1="18" y1="6"  x2="18" y2="16" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/>
+          <line x1="22" y1="6"  x2="22" y2="16" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/>
+          <line x1="26" y1="6"  x2="26" y2="16" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/>
+          <path d="M14 16 Q14 22 20 22 Q26 22 26 16" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" fill="none"/>
+        </svg>
+        <h4>Recipe Development</h4>
+        <p>No recipe yet, but a direction? We take your idea, decide on the right recipe for your niche, develop and test it in our kitchen, then photograph it with the same attention to your brand and style. Original content, ready to publish and rank.</p>
+        <a href="services.html#recipe-development" class="svc-card-link">Learn More →</a>
+      </div>
+
+      <!-- Recipe Reshoot -->
+      <div class="svc-card">
+        <svg class="svc-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect x="12" y="9" width="21" height="17" rx="2" stroke="currentColor" stroke-width="1.3" opacity=".38"/>
+          <rect x="7"  y="14" width="21" height="17" rx="2" stroke="currentColor" stroke-width="1.3"/>
+          <circle cx="17.5" cy="22.5" r="4.5" stroke="currentColor" stroke-width="1.3"/>
+          <path d="M13.5 14 L15 10.5 H21 L22.5 14" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <h4>Recipe Reshoot</h4>
+        <p>That post still gets traffic, but the photos aren't doing it justice — or you know a recipe could rank so much higher with better images. We recreate the dish and reshoot it with current styling, aligned to how your brand looks today.</p>
+        <a href="services.html#recipe-reshoot" class="svc-card-link">Learn More →</a>
+      </div>
+
+      <!-- Video Recipe -->
+      <div class="svc-card">
+        <svg class="svc-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect x="3" y="11" width="24" height="18" rx="2.5" stroke="currentColor" stroke-width="1.3"/>
+          <path d="M27 17 L37 13 L37 27 L27 23 Z" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M13 18 L13 22 L17.5 20 Z" fill="currentColor" opacity=".45"/>
+        </svg>
+        <h4>Video Recipe</h4>
+        <p>Video is today one of the strongest formats for food content — from Instagram to Pinterest to your blog, people engage more when they can see the recipe come to life. Full process to final plate, shot and edited around your format and platform.</p>
+        <a href="services.html#video-recipe" class="svc-card-link">Learn More →</a>
+      </div>
+
+      <!-- Build Your Own Package -->
+      <div class="svc-card">
+        <svg class="svc-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <line x1="7" y1="12" x2="33" y2="12" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" opacity=".35"/>
+          <circle cx="16" cy="12" r="3.5" stroke="currentColor" stroke-width="1.3"/>
+          <line x1="7" y1="20" x2="33" y2="20" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" opacity=".35"/>
+          <circle cx="26" cy="20" r="3.5" stroke="currentColor" stroke-width="1.3"/>
+          <line x1="7" y1="28" x2="33" y2="28" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" opacity=".35"/>
+          <circle cx="19" cy="28" r="3.5" stroke="currentColor" stroke-width="1.3"/>
+        </svg>
+        <h4>Build Your Own Package</h4>
+        <p>Every blog is different. If none of our services fit exactly what you need, we'll put together something that does — mixing formats, adjusting deliverables, and working around your budget. Tell us what you're looking for and we'll figure out the rest together.</p>
+        <a href="services.html#build-your-own" class="svc-card-link">Learn More →</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PORTFOLIO STRIP -->
+  <section class="portfolio-section">
+    <div class="section-header">
+      <h2>The work.</h2>
+    </div>
+    <div class="portfolio-strip" id="portfolioStrip">
+      <div class="portfolio-item"><img src="images/gallery1.webp"  alt="Food photography" loading="lazy"></div>
+      <div class="portfolio-item"><img src="images/gallery2.webp"  alt="Food photography" loading="lazy"></div>
+      <div class="portfolio-item"><img src="images/gallery3.webp"  alt="Food photography" loading="lazy"></div>
+      <div class="portfolio-item"><img src="images/gallery4.webp"  alt="Food photography" loading="lazy"></div>
+      <div class="portfolio-item"><img src="images/gallery5.webp"  alt="Food photography" loading="lazy"></div>
+      <div class="portfolio-item"><img src="images/gallery6.webp"  alt="Food photography" loading="lazy"></div>
+      <div class="portfolio-item"><img src="images/gallery7.webp"  alt="Food photography" loading="lazy"></div>
+      <div class="portfolio-item"><img src="images/gallery8.webp"  alt="Food photography" loading="lazy"></div>
+      <div class="portfolio-item"><img src="images/gallery9.webp"  alt="Food photography" loading="lazy"></div>
+      <div class="portfolio-item"><img src="images/gallery10.webp" alt="Food photography" loading="lazy"></div>
+      <div class="portfolio-item"><img src="images/gallery11.webp" alt="Food photography" loading="lazy"></div>
+      <div class="portfolio-item"><img src="images/gallery12.webp" alt="Food photography" loading="lazy"></div>
+      <div class="portfolio-item"><img src="images/gallery13.webp" alt="Food photography" loading="lazy"></div>
+      <div class="portfolio-item"><img src="images/gallery14.webp" alt="Food photography" loading="lazy"></div>
+      <div class="portfolio-item"><img src="images/gallery15.webp" alt="Food photography" loading="lazy"></div>
+      <div class="portfolio-item"><img src="images/gallery16.webp" alt="Food photography" loading="lazy"></div>
+      <div class="portfolio-item"><img src="images/gallery17.webp" alt="Food photography" loading="lazy"></div>
+      <div class="portfolio-item"><img src="images/gallery18.webp" alt="Food photography" loading="lazy"></div>
+      <div class="portfolio-item"><img src="images/gallery19.webp" alt="Food photography" loading="lazy"></div>
+      <div class="portfolio-item"><img src="images/gallery20.webp" alt="Food photography" loading="lazy"></div>
+      <div class="portfolio-item"><img src="images/gallery21.webp" alt="Food photography" loading="lazy"></div>
+      <div class="portfolio-item"><img src="images/gallery22.webp" alt="Food photography" loading="lazy"></div>
+      <div class="portfolio-item"><img src="images/gallery23.webp" alt="Food photography" loading="lazy"></div>
+      <div class="portfolio-item"><img src="images/gallery24.webp" alt="Food photography" loading="lazy"></div>
+      <div class="portfolio-item"><img src="images/gallery25.webp" alt="Food photography" loading="lazy"></div>
+      <div class="portfolio-item"><img src="images/gallery26.webp" alt="Food photography" loading="lazy"></div>
+    </div>
+  </section>
+
+  <!-- SUBSTACK -->
+  <section class="substack-section">
+    <div class="substack-inner">
+      <div class="substack-text">
+        <p class="label">From The Newsletter</p>
+        <h2>We write about food content, photography and what actually moves the needle for food bloggers.</h2>
+        <p>Practical insights on SEO, visual strategy, and the business side of running a food blog — straight to your inbox. No fluff.</p>
+        <a href="https://substack.com/@thegastrolab" target="_blank" rel="noopener" class="btn btn-dark">Follow on Substack →</a>
+      </div>
+      <a href="https://substack.com/@thegastrolab" target="_blank" rel="noopener" class="substack-card" aria-label="Read our latest post on Substack">
+        <p class="substack-card-title">Why Your Recipes Aren't Getting the Attention They Deserve (And What's Actually Going On)</p>
+        <p class="substack-card-excerpt">If you've been running a food blog or selling recipes online, you've probably noticed something uncomfortable over the past 12 months: your traffic is down. Maybe a little. Maybe a lot. And you've probably been blaming yourself — thinking you didn't post enough, or your SEO wasn't good enough, or the algorithm changed again.</p>
+        <span class="substack-card-byline">The Gastro Lab</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- COMMUNITY -->
+  <section class="community-section">
+    <div class="community-inner">
+      <div class="community-icon" aria-hidden="true">
+        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="16" cy="18" r="5.5" stroke="currentColor" stroke-width="1.4"/>
+          <circle cx="32" cy="18" r="5.5" stroke="currentColor" stroke-width="1.4"/>
+          <circle cx="24" cy="14" r="5.5" stroke="currentColor" stroke-width="1.4"/>
+          <path d="M6 36c0-5 4.5-8 10-8" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+          <path d="M42 36c0-5-4.5-8-10-8" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+          <path d="M14 36c0-5.5 4.5-9 10-9s10 3.5 10 9" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <p class="label">Private Community</p>
+      <h2>Join our Facebook group</h2>
+      <p>Semi-exclusive recipes, behind-the-scenes content, early access to discounts, photography tips, and a growing community of food bloggers helping each other. 103 members and counting — and it's free.</p>
+      <a href="https://www.facebook.com/groups/gastrolb" target="_blank" rel="noopener" class="btn btn-dark-outline community-btn">Join the Group →</a>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact-section" id="contact">
+    <div class="contact-wrap">
+      <p class="label">Work With Us</p>
+      <h2>Ready to grow your blog?</h2>
+      <p>Tell us about your project and we'll get back to you within 24&nbsp;hours.</p>
+      <form class="contact-form" action="https://formspree.io/f/xaqaddej" method="POST">
+        <div class="form-row">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Your name" required>
+        </div>
+        <div class="form-row">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="your@email.com" required>
+        </div>
+        <div class="form-row">
+          <label for="project">Project Type</label>
+          <select id="project" name="project_type" required>
+            <option value="" disabled selected>Select a service</option>
+            <option value="exclusive-shoot">Exclusive Recipe Shoot</option>
+            <option value="recipe-development">Recipe Development</option>
+            <option value="reshoot">Recipe Reshoot</option>
+            <option value="video-recipe">Video Recipe</option>
+            <option value="build-your-own">Build Your Own Package</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" placeholder="Tell us about your blog and what you need…" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-gold btn-submit">Send Message</button>
+      </form>
+      <p class="contact-email">Or reach us directly at thegastrolb@gmail.com</p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <p class="footer-copy">© 2026 The Gastro Lab. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

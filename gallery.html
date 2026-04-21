@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery — The Gastro Lab</title>
+  <meta name="description" content="Food photography portfolio by The Gastro Lab — professional images for food bloggers and recipe websites.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body.page-gallery { background: #ffffff; }
+
+    body.page-gallery nav {
+      background: #ffffff;
+      border-bottom-color: rgba(26,24,20,0.07);
+    }
+    body.page-gallery nav.scrolled { box-shadow: 0 2px 16px rgba(26,24,20,0.07); }
+    body.page-gallery .nav-logo-img        { filter: brightness(0); }
+    body.page-gallery .nav-links a         { color: rgba(26,24,20,0.6); }
+    body.page-gallery .nav-links a:hover,
+    body.page-gallery .nav-links a.active  { color: #1a1814; }
+    body.page-gallery .nav-links a::after  { background: #1a1814; }
+    body.page-gallery .nav-toggle span     { background: #1a1814; }
+
+    @media (max-width: 768px) {
+      body.page-gallery .nav-links.open { background: rgba(10,10,10,0.97); }
+      body.page-gallery .nav-links.open a { color: rgba(245,240,232,0.8); }
+      body.page-gallery .nav-links.open a:hover,
+      body.page-gallery .nav-links.open a.active { color: #fff; }
+    }
+
+    /* ── PAGE TITLE ── */
+    .gallery-header {
+      padding: 100px 28px 60px;
+      text-align: center;
+      background: #ffffff;
+    }
+    .gallery-header .label {
+      display: block;
+      margin-bottom: 16px;
+      font-size: 0.82rem;
+      letter-spacing: 0.22em;
+    }
+    .gallery-header h1 {
+      font-size: clamp(2.8rem, 6vw, 5rem);
+      color: #1a1814;
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+    }
+    .gallery-header-divider {
+      width: 40px;
+      height: 1px;
+      background: var(--gold);
+      margin: 28px auto 0;
+    }
+
+    /* ── GRID ── */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4px;
+      padding: 0 4px 4px;
+      align-items: start;
+    }
+
+    .gallery-grid-item {
+      overflow: hidden;
+      background: #f0ece6;
+      display: block;
+    }
+
+    .gallery-grid-item img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform 0.7s cubic-bezier(0.25,0.46,0.45,0.94);
+    }
+    .gallery-grid-item:hover img { transform: scale(1.03); }
+
+    /* Footer */
+    body.page-gallery footer {
+      background: #ffffff;
+      border-top-color: rgba(26,24,20,0.08);
+    }
+    body.page-gallery .footer-copy { color: #a09890; }
+    body.page-gallery .footer-ig   { color: #8a7e72; }
+    body.page-gallery .footer-ig:hover { color: var(--gold); }
+
+    @media (max-width: 600px) {
+      .gallery-grid { grid-template-columns: 1fr; gap: 3px; padding: 0 3px 3px; }
+      .gallery-header { padding: 80px 28px 44px; }
+    }
+  </style>
+</head>
+<body class="page-gallery">
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <a href="index.html" class="nav-logo"><img src="images/logo.webp" alt="The Gastro Lab" class="nav-logo-img"></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="gallery.html" class="active">Gallery</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- HEADER -->
+  <section class="gallery-header">
+    <span class="label">Our Work</span>
+    <h1>Gallery</h1>
+    <div class="gallery-header-divider"></div>
+  </section>
+
+  <!-- GALLERY GRID — sorted light → dark by brightness -->
+  <div class="gallery-grid">
+
+    <!-- Row 1: very light, airy -->
+    <div class="gallery-grid-item">
+      <img src="images/gallery8.webp"  alt="Food photography" loading="lazy">
+    </div>
+    <div class="gallery-grid-item">
+      <img src="images/gallery24.webp" alt="Food photography" loading="lazy">
+    </div>
+    <div class="gallery-grid-item">
+      <img src="images/gallery6.webp"  alt="Food photography" loading="lazy">
+    </div>
+
+    <!-- Row 2: light -->
+    <div class="gallery-grid-item">
+      <img src="images/gallery14.webp" alt="Food photography" loading="lazy">
+    </div>
+    <div class="gallery-grid-item">
+      <img src="images/gallery10.webp" alt="Food photography" loading="lazy">
+    </div>
+    <div class="gallery-grid-item">
+      <img src="images/gallery3.webp"  alt="Food photography" loading="lazy">
+    </div>
+
+    <!-- Row 3: medium-light -->
+    <div class="gallery-grid-item">
+      <img src="images/gallery15.webp" alt="Food photography" loading="lazy">
+    </div>
+    <div class="gallery-grid-item">
+      <img src="images/gallery13.webp" alt="Food photography" loading="lazy">
+    </div>
+    <div class="gallery-grid-item">
+      <img src="images/gallery21.webp" alt="Food photography" loading="lazy">
+    </div>
+
+    <!-- Row 4: medium -->
+    <div class="gallery-grid-item">
+      <img src="images/gallery22.webp" alt="Food photography" loading="lazy">
+    </div>
+    <div class="gallery-grid-item">
+      <img src="images/gallery5.webp"  alt="Food photography" loading="lazy">
+    </div>
+    <div class="gallery-grid-item">
+      <img src="images/gallery25.webp" alt="Food photography" loading="lazy">
+    </div>
+
+    <!-- Row 5: medium -->
+    <div class="gallery-grid-item">
+      <img src="images/gallery4.webp"  alt="Food photography" loading="lazy">
+    </div>
+    <div class="gallery-grid-item">
+      <img src="images/gallery12.webp" alt="Food photography" loading="lazy">
+    </div>
+    <div class="gallery-grid-item">
+      <img src="images/gallery18.webp" alt="Food photography" loading="lazy">
+    </div>
+
+    <!-- Row 6: medium-dark -->
+    <div class="gallery-grid-item">
+      <img src="images/gallery23.webp" alt="Food photography" loading="lazy">
+    </div>
+    <div class="gallery-grid-item">
+      <img src="images/gallery11.webp" alt="Food photography" loading="lazy">
+    </div>
+    <div class="gallery-grid-item">
+      <img src="images/gallery20.webp" alt="Food photography" loading="lazy">
+    </div>
+
+    <!-- Row 7: darker -->
+    <div class="gallery-grid-item">
+      <img src="images/gallery2.webp"  alt="Food photography" loading="lazy">
+    </div>
+    <div class="gallery-grid-item">
+      <img src="images/gallery17.webp" alt="Food photography" loading="lazy">
+    </div>
+    <div class="gallery-grid-item">
+      <img src="images/gallery16.webp" alt="Food photography" loading="lazy">
+    </div>
+
+    <!-- Row 8: dark -->
+    <div class="gallery-grid-item">
+      <img src="images/gallery26.webp" alt="Food photography" loading="lazy">
+    </div>
+    <div class="gallery-grid-item">
+      <img src="images/gallery1.webp"  alt="Food photography" loading="lazy">
+    </div>
+    <div class="gallery-grid-item">
+      <img src="images/gallery9.webp"  alt="Food photography" loading="lazy">
+    </div>
+
+    <!-- Row 9: darkest/moodiest -->
+    <div class="gallery-grid-item">
+      <img src="images/gallery7.webp"  alt="Food photography" loading="lazy">
+    </div>
+    <div class="gallery-grid-item">
+      <img src="images/gallery19.webp" alt="Food photography" loading="lazy">
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <p class="footer-copy">© 2026 The Gastro Lab. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
