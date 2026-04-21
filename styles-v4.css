@@ -536,8 +536,8 @@ body.page-home .svc-card-link { color: var(--gold); border-bottom-color: rgba(20
 .portfolio-strip.dragging { cursor: grabbing; user-select: none; }
 .portfolio-item {
   flex: 0 0 auto;
-  width: 290px;
-  height: 406px;
+  width: 420px;
+  height: 560px;
   scroll-snap-align: start;
   overflow: hidden;
   background: var(--bg-card);
@@ -1204,11 +1204,12 @@ body.page-home .contact-email { color: #aaa49c; }
 
 /* ── CARD SIZE CONTROL BAR (desktop only) ── */
 #cardSizeControl {
-  display: none;
+  display: none !important;
 }
 @media (min-width: 769px) {
   #cardSizeControl {
-    display: flex;
+    display: none !important;
+    /* display: flex; ← uncomment to re-enable the control bar */
     flex-direction: column;
     gap: 8px;
     position: fixed;
