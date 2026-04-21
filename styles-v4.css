@@ -438,7 +438,7 @@ footer {
 
 /* — SERVICES PREVIEW (index) — */
 .services-preview {
-  padding: 100px 60px;
+  padding: 100px 28px;
   background: var(--bg-secondary);
 }
 .services-grid {
@@ -1012,14 +1012,15 @@ body.page-home .section-header .label { color: var(--gold); }
 
 /* Services — 5 columns, white cards */
 body.page-home .services-grid {
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(5, 1fr);
+  max-width: 1440px;
   background: rgba(26,24,20,0.05);
   border-color: rgba(26,24,20,0.05);
 }
 body.page-home .svc-card {
   background: #ffffff;
   border-top: 2px solid var(--gold);
-  padding: 48px 40px;
+  padding: 40px 28px;
 }
 body.page-home .svc-card:hover {
   background: #faf7f2;
@@ -1196,9 +1197,9 @@ body.page-home .contact-email { color: #aaa49c; }
   p                         { font-size: 20px !important; }
   .hero-subhead             { font-size: 20px !important; }
 
-  .svc-card h4              { font-size: 26px !important; }
-  .svc-card p               { font-size: 17px !important; }
-  .svc-card-link            { font-size: 15px !important; }
+  .svc-card h4              { font-size: 20px !important; }
+  .svc-card p               { font-size: 14px !important; }
+  .svc-card-link            { font-size: 13px !important; }
 
   .svc-text > p             { font-size: 20px !important; }
   .svc-includes li          { font-size: 18px !important; }
