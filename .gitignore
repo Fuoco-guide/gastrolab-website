@@ -1,0 +1,11 @@
+.DS_Store
+images/.DS_Store
+generate-placeholders.py
+ship.sh
+
+# Original large source images — website uses .webp only
+images/*.jpg
+images/*.jpeg
+images/*.JPG
+images/*.NEF
+images/*.png
