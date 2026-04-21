@@ -2,6 +2,23 @@
    THE GASTRO LAB — STYLESHEET
    ============================================ */
 
+/* ============================================
+   ✏️  EASY EDIT — SERVICES CARD SECTION
+   Change these values to resize the cards.
+   ============================================ */
+:root {
+  /* Card grid */
+  --svc-cols:           5;          /* number of columns: 3, 4, or 5 */
+  --svc-grid-maxwidth:  1440px;     /* total width of the grid */
+  --svc-card-padding:   40px 28px;  /* space inside each card */
+
+  /* Card text sizes */
+  --svc-title-size:     20px;       /* card title (h4) */
+  --svc-body-size:      14px;       /* card body paragraph */
+  --svc-link-size:      13px;       /* "Learn More" link */
+}
+/* ============================================ */
+
 /* — VARIABLES — */
 :root {
   --bg-primary:   #0a0a0a;
@@ -1012,15 +1029,15 @@ body.page-home .section-header .label { color: var(--gold); }
 
 /* Services — 5 columns, white cards */
 body.page-home .services-grid {
-  grid-template-columns: repeat(5, 1fr);
-  max-width: 1440px;
+  grid-template-columns: repeat(var(--svc-cols), 1fr);
+  max-width: var(--svc-grid-maxwidth);
   background: rgba(26,24,20,0.05);
   border-color: rgba(26,24,20,0.05);
 }
 body.page-home .svc-card {
   background: #ffffff;
   border-top: 2px solid var(--gold);
-  padding: 40px 28px;
+  padding: var(--svc-card-padding);
 }
 body.page-home .svc-card:hover {
   background: #faf7f2;
@@ -1197,9 +1214,9 @@ body.page-home .contact-email { color: #aaa49c; }
   p                         { font-size: 20px !important; }
   .hero-subhead             { font-size: 20px !important; }
 
-  .svc-card h4              { font-size: 20px !important; }
-  .svc-card p               { font-size: 14px !important; }
-  .svc-card-link            { font-size: 13px !important; }
+  .svc-card h4              { font-size: var(--svc-title-size) !important; }
+  .svc-card p               { font-size: var(--svc-body-size) !important; }
+  .svc-card-link            { font-size: var(--svc-link-size) !important; }
 
   .svc-text > p             { font-size: 20px !important; }
   .svc-includes li          { font-size: 18px !important; }
